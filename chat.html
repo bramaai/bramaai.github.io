@@ -12,12 +12,14 @@
   <pre id="response" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; max-width: 500px;"></pre>
 
   <script>
+    const NGROK_URL = "https://f814-34-87-20-45.ngrok-free.app";
+
     async function sendMessage() {
       const message = document.getElementById("input").value;
       if (!message.trim()) return;
       document.getElementById("response").textContent = "Waiting for reply...";
       try {
-        const res = await fetch("https://f814-34-87-20-45.ngrok-free.app/chat", {
+        const res = await fetch(`${NGROK_URL}/chat`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ prompt: message })
