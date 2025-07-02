@@ -17,7 +17,7 @@
       if (!message.trim()) return;
       document.getElementById("response").textContent = "Waiting for reply...";
       try {
-        const res = await fetch("https://d672-34-87-20-45.ngrok-free.app/chat", {
+        const res = await fetch("https://ff7e-34-87-20-45.ngrok-free.app/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ prompt: message })
